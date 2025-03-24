@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./Exam/Part A",
+        "./Exam/Part B/Part_A"
+    ]
+}
