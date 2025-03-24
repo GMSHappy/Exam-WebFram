@@ -5,7 +5,7 @@ from PartA import House, FurnishedHouse
 class TestHouseMethods(unittest.TestCase):
     
     def setUp(self):
-        # Initialize test objects for House and FurnishedHouse
+        # Create instances of House and FurnishedHouse
         self.house = House(10, "Main Street", "Dublin", 3, 200000)
         self.furnished_house = FurnishedHouse(20, "Green Street", "Cork", 4, 300000, True, "Modern")
 
@@ -14,7 +14,7 @@ class TestHouseMethods(unittest.TestCase):
         self.assertIsInstance(self.house, House)
         self.assertIsInstance(self.furnished_house, FurnishedHouse)
 
-    # B3: Test if an object is NOT an instance of a class
+    # B3: Test if an object is not an instance of a class
     def test_not_instance_of_class(self):
         self.assertNotIsInstance(self.house, FurnishedHouse)
         self.assertNotIsInstance(self.furnished_house, str)
@@ -25,7 +25,7 @@ class TestHouseMethods(unittest.TestCase):
         self.assertIs(self.house, same_house)
         self.assertIsNot(self.house, self.furnished_house)
 
-    # B5: Test update methods work correctly (from Part A4)
+    # B5: Test update methods work correctly for House
     def test_update_house_number(self):
         self.house.update_house_number(25)
         self.assertEqual(self.house.house_number, 25)
